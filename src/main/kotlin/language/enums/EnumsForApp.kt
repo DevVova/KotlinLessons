@@ -1,4 +1,4 @@
-package enums
+package language.enums
 
 fun main() {
     val dayOfWeek = DaysOfWeek.Tuesday

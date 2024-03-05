@@ -1,4 +1,4 @@
-package base.datatypes
+package language.base.datatypes
 
 fun main() {
     val a: Byte = -3//Byte: хранит целое число от -128 до 127 и занимает 1 байт.

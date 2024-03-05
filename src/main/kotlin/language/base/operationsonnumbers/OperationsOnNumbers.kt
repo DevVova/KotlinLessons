@@ -1,4 +1,4 @@
-package base.operationsonnumbers
+package language.base.operationsonnumbers
 
 fun main() {
     //Kotlin поддерживает базовые арифметические операции:

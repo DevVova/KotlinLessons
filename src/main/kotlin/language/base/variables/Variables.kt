@@ -1,4 +1,4 @@
-package base.variables
+package language.base.variables
 
 //Ниже пример объявление переменных верхнего уровня.
 val topLevelVariable: Long = 23//Здесь среда ругается, так как вверху лучше располагать только константы.
