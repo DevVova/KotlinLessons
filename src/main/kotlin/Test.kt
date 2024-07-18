@@ -1,12 +1,12 @@
 fun main() {
-    val result = function1 { num1 ->
-        num1 * 3
+    val result = "Wow"
+    f {
+        println(result)
     }
-    println(result)
+    println("Good job!")
 }
 
-fun function1(function2: (Int) -> Int): Int {
-    val number = 7
-    val res = function2(number)
-    return res
+fun f(ff: (String) -> Unit) {
+    val str = "Hello"
+    ff(str)
 }
