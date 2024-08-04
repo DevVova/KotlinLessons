@@ -15,7 +15,7 @@ fun main() {
     val stopLossForOrderBuy2 = SL2()
 
     //А теперь создаём объекты, делегирующие свои действия другим определённым объектам.
-    val myOrder = Order(takeProfitForOrderBuy1, stopLossForOrderBuy2)
+    val myOrder = Order111(takeProfitForOrderBuy1, stopLossForOrderBuy2)
     val myOrder2 = Order2(takeProfitForOrderBuy2, stopLossForOrderBuy1)
     val myOrder3 = Order3(takeProfitForOrderBuy1, stopLossForOrderBuy1)
 
@@ -90,7 +90,7 @@ class TP2 : TakeProfit {
 }
 
 //Класс-делегат: Принимает объект, реализующий интерфейс, и делегирует ему вызовы методов.
-class Order(private val tp: TakeProfit, private val sl: StopLoss) : TakeProfit, StopLoss {
+class Order111(private val tp: TakeProfit, private val sl: StopLoss) : TakeProfit, StopLoss {
     override fun takeProfit() {
         tp.takeProfit()
         println("This is class delegate.")//Это к примеру будет дополнением к обычной реализации. Вот для чего нужно явное делегирование.
