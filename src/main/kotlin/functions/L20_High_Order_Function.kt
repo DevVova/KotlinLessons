@@ -1,7 +1,5 @@
 package functions
 
-import javax.print.attribute.standard.PrintQuality
-
 /**
  * Функции высокого порядка (high order function) - это функции, которые либо принимают
  * функцию в качестве параметра, либо возвращают функцию, либо и то, и другое.
