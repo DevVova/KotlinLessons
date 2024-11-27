@@ -7,7 +7,7 @@ fun main() {
     val timeMillisecond = instant.toEpochMilli()
     val pullBackToInstant = Instant.ofEpochMilli(timeMillisecond)
 
-    val arr1 = Array(2) {23}
+    val arr1 = Array(2) { 23 }
     val arr2 = arrayOf(2, 112, 3)
     println(getBiggest(arr1, arr2)[1])
 
@@ -31,6 +31,11 @@ fun main() {
     val p2 = PriceBar(timeMillisecond, 3330)
     println(p2.getVolume(Instant.now()))
     println(p2.volume)
+
+    val listOfInstants: List<Int> = listOf(23, 45, 3, 4)
+    val listOfQuotes = Candlestick2(listOfInstants, 34.3)
+    println(listOfQuotes.getMySortedCandlesticks())
+    listOfQuotes.getItems()
 }
 
 class Candlestick<T>(val time: T, val volume: Int)
@@ -47,4 +52,14 @@ class PriceBar<K, V>(private val time: K, val volume: V) {
 
 fun <T> getBiggest(num1: Array<T>, num2: Array<T>): Array<T> {
     return if (num1.size > num2.size) num1 else num2
+}
+
+class Candlestick2<K, V>(private val time: List<K>, private val items: V) where K : Comparable<K>,
+                                                                                K : Number {
+    fun getMySortedCandlesticks(): List<K> {
+        return time.sorted().reversed()
+    }
+    fun getItems() {
+        println(items)
+    }
 }
